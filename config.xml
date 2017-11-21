@@ -2,10 +2,10 @@
 <widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Workout App</name>
     <description>
-        A blank PhoneGap app.
+        This app will help you quickly put together a workout plan so that you can stop planning that shit, and just workout.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="cstehm@comcast.net" href="http://www.chrisstehm.com">
+        Chris Stehm
     </author>
     <content src="index.html" />
     <access origin="*" />
