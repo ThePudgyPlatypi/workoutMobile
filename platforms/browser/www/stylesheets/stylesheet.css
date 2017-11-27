@@ -57,7 +57,7 @@ nav {
 }
 
 .formWrapper input[type="checkbox"]:checked + label {
-	background-color: $secondary;
+	background-color: #767676;
 }
 
 .formWrapper input[type="radio"] {

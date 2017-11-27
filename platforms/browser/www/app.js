@@ -2,13 +2,18 @@ var app = angular.module('workout', ['ui.router', 'rails', 'ng-token-auth', 'fla
 
 app.config(['$stateProvider', '$urlRouterProvider', '$authProvider', function($stateProvider, $urlRouterProvider, $authProvider) {
 	$stateProvider.state('home', {
-		url: "/",
+		url: "/home",
 		templateUrl: "views/_home.html",
 		controller: "NavCtrl",
 	}).state('workoutStart', {
 		url: "/workoutSetup", 
 		templateUrl: "views/_workoutSetup.html",
-		controller: "WorkoutEngineCtrl"
+		controller: "WorkoutEngineCtrl",
+		resolve: {
+          auth: function($auth) {
+            return $auth.validateUser();
+          }
+        }
 	}).state('login', {
 		url: "/login",
 		templateUrl: "views/_login.html",
@@ -21,10 +26,20 @@ app.config(['$stateProvider', '$urlRouterProvider', '$authProvider', function($s
 		url: "/equip/setup",
 		templateUrl: "views/_equipSetup.html",
 		controller: "UserEquipmentCtrl",
+		resolve: {
+          auth: function($auth) {
+            return $auth.validateUser();
+          }
+        }
 	}).state('equipEdit', {
 		url: "/equip/edit",
 		templateUrl: "views/_equipEdit.html",
 		controller: "UserEquipmentCtrl",
+		resolve: {
+          auth: function($auth) {
+            return $auth.validateUser();
+          }
+        }
 	})
 
 	$urlRouterProvider.otherwise('login');
