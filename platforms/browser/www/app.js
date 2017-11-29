@@ -1,10 +1,13 @@
 var app = angular.module('workout', ['ui.router', 'rails', 'ng-token-auth', 'flashr', 'ngAnimate']);
 
-app.config(['$stateProvider', '$urlRouterProvider', '$authProvider', function($stateProvider, $urlRouterProvider, $authProvider) {
+app.config(['$stateProvider', 
+	'$urlRouterProvider', 
+	'$authProvider',
+	function($stateProvider, $urlRouterProvider, $authProvider) {
 	$stateProvider.state('home', {
 		url: "/home",
 		templateUrl: "views/_home.html",
-		controller: "NavCtrl",
+		controller: "AuthCtrl"
 	}).state('workoutStart', {
 		url: "/workoutSetup", 
 		templateUrl: "views/_workoutSetup.html",
@@ -41,8 +44,6 @@ app.config(['$stateProvider', '$urlRouterProvider', '$authProvider', function($s
           }
         }
 	})
-
-	$urlRouterProvider.otherwise('login');
 
 	$authProvider.configure({
 		apiUrl: 'http://192.168.1.49:3000'

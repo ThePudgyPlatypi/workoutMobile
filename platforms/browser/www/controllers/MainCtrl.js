@@ -1,3 +1,3 @@
-app.controller("MainCtrl", ["$scope", "Auth", function($scope, Auth) {
+app.controller("MainCtrl", ["$scope", function($scope) {
 	$scope.test = "hello world";
 }]);
