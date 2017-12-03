@@ -33,7 +33,7 @@ nav.scrolled {
 	transition: transform 0.2s;
 }
 
-.home {
+.pageCenter {
 	min-height: 100vh;
 }
 
@@ -139,6 +139,7 @@ nav {
 	background-color: white;
 	min-height: 100vh;
 	width: 100%;
+	margin-top: 40px;
 	margin-right: -20px;
 	padding: 20px;
 	padding-right: 20px;
@@ -154,4 +155,23 @@ nav {
 
 .exerciseInfo {
 	background-color: #e6e6e6;
+	padding: 20px;
+	border-radius: 20px;
+}
+
+.exercise-wrapper {
+	height: 100%;
+}
+
+.search {
+	padding: 20px 0 20px 0;
+	margin-bottom: 20px;
+	width: 100%;
+	background-color: #e6e6e6;
+}
+
+.searchBar {
+	width: 75%;
+	padding: 5px;
+	font-size: 1.2em;
 }

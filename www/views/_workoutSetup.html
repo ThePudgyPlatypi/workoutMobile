@@ -1,5 +1,5 @@
 <div class="page-wrapper" ng-switch="navigator">
-	<div ng-switch-when="start" class="page">
+	<div ng-switch-when="start" class="page box-shadow">
 		<h1>Let's get started</h1>
 
 		<p>What part of the body, if any, would you like to focus on today?</p>
@@ -98,6 +98,7 @@
 			<div ng-if="exerciseNavigator === $index" class="page">
 				<div class="exerciseInfo">
 					<h2>{{exercise.name}}</h2>
+					<img ng-src="../images/{{exercise.picture}}" ng-alt="{{exercise.name}}">
 					<h3>Instructions</h3>
 					<p> - {{exercise.description}}</p>
 				</div>
