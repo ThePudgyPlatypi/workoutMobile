@@ -1,4 +1,10 @@
-app.controller('AuthCtrl', ["$scope", "$rootScope", "$auth", "$state", "flash", function($scope, $rootScope, $auth, $state, flash) {
+app.controller('AuthCtrl', [
+  "$scope", 
+  "$rootScope", 
+  "$auth", 
+  "$state", 
+  "flash",
+  function($scope, $rootScope, $auth, $state, flash) {
   $scope.user = {};
   $scope.error = {};
 	$scope.login = function() {

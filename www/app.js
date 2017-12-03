@@ -5,7 +5,7 @@ app.config(['$stateProvider',
 	'$authProvider',
 	function($stateProvider, $urlRouterProvider, $authProvider) {
 	$stateProvider.state('home', {
-		url: "/home",
+		url: "/",
 		templateUrl: "views/_home.html",
 		controller: "AuthCtrl"
 	}).state('workoutStart', {
@@ -43,7 +43,9 @@ app.config(['$stateProvider',
             return $auth.validateUser();
           }
         }
-	})
+	});
+
+	$urlRouterProvider.otherwise('/');
 
 	$authProvider.configure({
 		apiUrl: 'http://192.168.1.49:3000'

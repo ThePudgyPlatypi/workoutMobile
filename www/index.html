@@ -17,11 +17,12 @@
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script src="bower_components/toastr/toastr.min.js"></script>
         <script src="bower_components/underscore/underscore-min.js"></script>
-        <script src="bower_components/foundation-sites/dist/foundation.js"></script>
+        <script src="foundation.min.js"></script>
     </head>
 
     <body ng-app="workout">
-        <div ng-include="'views/_nav.html'"></div>
+        <div ng-include="'views/_nav.html'" ng-class='{ "scrolled" : scrolled }' scroll-class=''></div>
+        
         <div class="grid-container full">
           <div class="grid-x text-center">
               <div class="cell">
@@ -46,6 +47,7 @@
     <script src="directives/deleteDir.js"></script>
     <script src="directives/exerciseFilter.js"></script>
     <script src="directives/randomFilter.js"></script>
+    <script src="directives/navScrollDir.js"></script>
     <!-- services  -->
     <script src="services/concentrationFactory.js"></script>
     <script src="services/equipmentFactory.js"></script>

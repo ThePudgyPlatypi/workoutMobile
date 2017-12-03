@@ -18,9 +18,10 @@
 	<form ng-submit="addEquipmentToUser()" name="Equipment">
 		<fieldset class="fieldset">
 			<legend>Please pick what equipment you have access too.</legend>
+			<label>Search: <input ng-model="search.$"></label>
 			<div class="grid-container">
-  				<div class="grid-x grid-margin-x small-up-2 medium-up-3">
-					<div class="cell inputContainer" ng-repeat="equipment in equipments">
+  				<div class="grid-x grid-margin-x small-up-1 medium-up-3">
+					<div class="cell inputContainer" ng-repeat="equipment in equipments | filter:search">
 						<input class="equipmentCheckbox" 
 								id="{{equipment.name}}" 
 								type="checkbox"
