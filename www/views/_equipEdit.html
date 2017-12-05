@@ -17,12 +17,14 @@
 				</div>
 			</div>
 		</div>
+		
 		<div class="formWrapper">
 			<form ng-submit="addEquipmentToUser()" name="Equipment">
 				<fieldset class="fieldset">
+					<input class="button large expanded no-animate" type="submit" value="Add Equipment">
 					<legend>Please pick what equipment you have access too.</legend>
 
-					<label class="search"><input class="searchBar" placeholder="Search" ng-model="search.$"></label>
+					<label class="search"><input class="searchBar" placeholder="Search for Equipment" ng-model="search.$"></label>
 					<div class="grid-container">
 		  				<div class="grid-x grid-margin-x small-up-1 medium-up-3">
 							<div class="cell inputContainer" ng-repeat="equipment in equipments | filter:search">
@@ -44,7 +46,7 @@
 						</div>
 					</div>
 				</fieldset>
-				<input class="button large expanded no-animate" type="submit">
+				<input class="button large expanded no-animate" type="submit" value="Add Equipment">
 			</form>
 		</div>
 	</div>

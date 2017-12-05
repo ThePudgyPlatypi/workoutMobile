@@ -2,9 +2,10 @@ app.controller("UserEquipmentCtrl", [
 	"$scope", 
 	"equipment",
 	"userEquipment", 
+	"equipmentCat",
 	"flash",
 	"$state",
-	function($scope, equipment, userEquipment, flash, $state) {
+	function($scope, equipment, userEquipment, equipmentCat, flash, $state) {
 		$scope.searching = true;
 		$scope.pageClass="UserEquipment";
 		
@@ -17,6 +18,17 @@ app.controller("UserEquipmentCtrl", [
 		// equipment
 		equipment.query().then(function(results) {
 			$scope.equipments = results;
+			console.log($scope.equipments);
+			$scope.searching = false;
+		}, function(error) {
+			console.log(error);
+			$scope.searching = false;
+		});
+
+		// equipment categories
+		equipmentCat.query().then(function(results) {
+			$scope.equipmentCats = results;
+			console.log($scope.equipmentCats);
 			$scope.searching = false;
 		}, function(error) {
 			console.log(error);
@@ -30,25 +42,29 @@ app.controller("UserEquipmentCtrl", [
 			$scope.userEquipments = [];
 			$scope.userEquipments = results;
 			$scope.searching = false; 
+			// console.log($scope.userEquipments);
 		});
 
 		$scope.userEquipments = [];
+		$scope.equipmentCats = [];
 		$scope.selected = [];
 
 		$scope.addEquipmentToUser = function() {
-			console.log("_________________________________")
+			// console.log("_________________________________");
+			var entered = false;
 			outerloop:
 			for(var i = 0; i < $scope.selected.length; i++) {
 				var duplicate = false;
 				var name = $scope.selected[i].name;
 				var description = $scope.selected[i].description;
 				var equipment_id = $scope.selected[i].id;
-				console.log(i + " - Current selected entry name " + name);
+				
+				// console.log(i + " - Current selected entry name " + name);
 
 				// First checking if the value is false before continuing 
 				if (!$scope.selected[i]) {
-					console.log("Entry is a false value. Skipping to next entry");
-					console.log("_________________________________");
+					// console.log("Entry is a false value. Skipping to next entry");
+					// console.log("_________________________________");
 					continue;
 				} 
 
@@ -56,7 +72,7 @@ app.controller("UserEquipmentCtrl", [
 				for (var x = 0; x < $scope.userEquipments.length; x++) {
 					// console.log("Innerloop " + x + " - Checking for duplicate on " + $scope.userEquipments[x].name + " against " + name)
 					if ($scope.userEquipments[x].name === name) {
-						console.log("Duplicate entry = " + $scope.userEquipments[x].name)
+						// console.log("Duplicate entry = " + $scope.userEquipments[x].name);
 						duplicate = true;
 						break;
 					}
@@ -65,8 +81,8 @@ app.controller("UserEquipmentCtrl", [
 	
 				// also checking to see if the innerloop has found a duplicate entry and skipping if so
 				if (duplicate) {
-					console.log("Skipping to next entry because of duplicate");
-					console.log("_________________________________");
+					// console.log("Skipping to next entry because of duplicate");
+					// console.log("_________________________________");
 					continue;
 				} else {
 					// assigning new database entry, user_id gets added via rails controller
@@ -74,12 +90,13 @@ app.controller("UserEquipmentCtrl", [
 						name: name,
 						description: description,
 						equipment_id: equipment_id
-					}).create();
+					}).create().then(function(response) {
+						$scope.userEquipments.push(response);
+						flash.saved("Equipment");
+					});
 				}
 			};
-			console.log("Last entry reached");
-			flash.saved("Equipment");
-			$state.reload();
+			flash.saving();
 		};
 
 		$scope.removeEquipmentFromUser = function(id) {

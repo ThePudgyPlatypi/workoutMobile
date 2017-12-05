@@ -41,6 +41,9 @@ nav {
 }
 
 /*Form and button styling*/
+input {
+	text-align: center;
+}
 .inputContainer {
 	margin-bottom: 1rem;
 }

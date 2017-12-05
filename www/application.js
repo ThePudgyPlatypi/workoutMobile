@@ -2,14 +2,14 @@ $(function(){ $(document).foundation(); });
 
 toastr.options = {
 	"debug": false,
-	"preventDuplicates": true,
-	"progressBar": true, 
+	"preventDuplicates": false,
+	"progressBar": false, 
 	"showMethod": 'slideDown',
 	"positionClass": "toast-top-center",
 	"closeButton": true,
 	"onclick": null,
 	"fadeIn": 300,
-	"fadeOut": 1000,
+	"fadeOut": 2000,
 	"timeOut": 2000,
 	"extendedTimeOut": 1000
 }
