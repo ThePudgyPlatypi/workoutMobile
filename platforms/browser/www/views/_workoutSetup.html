@@ -99,8 +99,8 @@
 
 	<div ng-switch-when="active" class="page box-shadow">
 		<div class="page-outer">
-			<div class="exercise-wrapper" ng-repeat="exercise in filteredExercises | exercise:difficulty.value:workoutDuration.time">
-				<div ng-if="exerciseNavigator === $index">
+			<div class="" ng-repeat="exercise in filteredExercises | exercise:difficulty.value:workoutDuration.time">
+				<div class="page box-shadow" ng-if="exerciseNavigator === $index">
 					<div class="grid-x grid-padding-x align-center">
 						<div class="exerciseInfo cell small-12 ">
 							<h2>{{exercise.name}}</h2>
@@ -111,6 +111,7 @@
 						</div>
 					</div>
 				</div>
+				
 				<div ng-show="$last && exerciseNavigator == $index + 1">
 					<h2>Workout Complete!</h2>
 					<a href="#!/" class="button expanded">Finish</a>

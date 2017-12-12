@@ -28,16 +28,8 @@ nav {
 	z-index: 1;
 }
 
-nav.scrolled {
-
-}
-
 .pageCenter {
 	min-height: 100vh;
-}
-
-nav {
-	
 }
 
 /*Form and button styling*/

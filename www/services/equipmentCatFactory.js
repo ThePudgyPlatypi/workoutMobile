@@ -1,6 +1,6 @@
 app.factory('equipmentCat', ["railsResourceFactory", function(railsResourceFactory){
 	return railsResourceFactory ({
-		url: 'http://192.168.1.49:3000/equipment_cat',
+		url: 'http://71.168.189.93/equipment_cat',
 		name: 'equipmentCat'
 	}); 
-}])
+}]);

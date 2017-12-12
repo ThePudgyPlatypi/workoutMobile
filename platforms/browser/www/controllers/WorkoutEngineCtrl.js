@@ -33,7 +33,8 @@ app.controller("WorkoutEngineCtrl", [
 
 		// concentrations db query
 		concentrations.query().then(function (results) {
-	        $scope.concentrations = results;
+			$scope.concentrations = results;
+			console.log(results = " These are the concentrations");
 	        $scope.searching = false;
 	    }, function (error) {
 	        console.log(error);

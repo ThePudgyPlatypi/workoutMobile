@@ -48,7 +48,7 @@ app.config(['$stateProvider',
 	$urlRouterProvider.otherwise('/');
 
 	$authProvider.configure({
-		apiUrl: 'http://192.168.1.49:3000'
+		apiUrl: 'http://71.168.189.93'
 	});
 }]);
 

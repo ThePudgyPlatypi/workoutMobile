@@ -1,6 +1,6 @@
 app.factory('concentrations', ["railsResourceFactory", function(railsResourceFactory){
 	return railsResourceFactory({
-			url: 'http://192.168.1.49:3000/concentration',
+			url: 'http://71.168.189.93/concentration',
 			name: 'concentration'
-		})
+		});
 }]);
