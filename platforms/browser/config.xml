@@ -9,4 +9,5 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <allow-navigation href="http://71.168.189.93/*" />
 </widget>

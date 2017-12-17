@@ -1,0 +1,22 @@
+<div class="page box-shadow">
+	<div class="page-outer">
+		<div class="grid-x pageCenter align-center-middle"> 
+			<div class="cell small-12">
+				<div class="page-header">
+				  <h1>Log In</h1>
+				</div>
+
+				<form ng-submit="submitLogin(user)" ng-init="user = {}">
+				  <div class="input-group">
+				    <input type="email" class="form-control" placeholder="Email" ng-model="user.email">
+				  </div>
+				  <div class="input-group">
+				    <input type="password" class="form-control" placeholder="Password" ng-model="user.password">
+				  </div>
+				  <input type="submit" class="button" value="Log In"><br>
+				  <a href="#!/register">New user? Sign up!</a>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

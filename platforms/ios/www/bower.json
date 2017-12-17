@@ -1,0 +1,29 @@
+{
+  "name": "workoutMobile",
+  "homepage": "https://github.com/ThePudgyPlatypi/workoutMobile",
+  "authors": [
+    "ThePudgyPlatypi <cstehm@comcast.net>"
+  ],
+  "description": "Mobile version of my workout web app",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-ui-router": "^1.0.10",
+    "angular.flashr": "*",
+    "underscore": "^1.8.3",
+    "angular-animate": "^1.6.6",
+    "angularjs-rails-resource": "^2.2.2",
+    "ng-token-auth": "^0.0.30"
+  },
+  "resolutions": {
+    "angular": "^1.6.6"
+  }
+}

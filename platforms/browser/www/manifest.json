@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Workout App",
+  "short_name": "Workout App",
+  "version": "com.phonegap.helloworld",
+  "description": "This app will help you quickly put together a workout plan so that you can stop planning that shit, and just workout.",
+  "author": "Chris Stehm",
+  "icons": [],
+  "start_url": "index.html"
+}

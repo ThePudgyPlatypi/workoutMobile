@@ -1,0 +1,24 @@
+<div class="page box-shadow">
+	<div class="page-outer">
+		<div class="grid-x grid-padding-x pageCenter"> 
+			<div class="cell small-12 align-self-middle">
+
+				<div class="page-header">
+				  <h1>Register</h1>
+				</div>
+
+				<form ng-submit="submitRegistration(user)">
+				  <div class="input-group">
+				    <input type="email" class="form-control" placeholder="Email" ng-model="user.email">
+				  </div>
+				  <div class="input-group">
+				    <input type="password" class="form-control" placeholder="Password" ng-model="user.password">
+				  </div>
+				  <input type="submit" class="button" value="Register"><br>
+				  <a href="#!/login">Already have an account?</a>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</div>
