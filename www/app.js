@@ -3,7 +3,10 @@ var app = angular.module('workout', ['ui.router', 'rails', 'ng-token-auth', 'fla
 app.config(['$stateProvider', 
 	'$urlRouterProvider', 
 	'$authProvider',
-	function($stateProvider, $urlRouterProvider, $authProvider) {
+	'$compileProvider',
+	function($stateProvider, $urlRouterProvider, $authProvider, $compileProvider) {
+		$compileProvider.imgSrcSanitizationWhitelist('images/');
+
 	$stateProvider.state('home', {
 		url: "/",
 		templateUrl: "views/_home.html",
