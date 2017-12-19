@@ -5,7 +5,7 @@ app.config(['$stateProvider',
 	'$authProvider',
 	'$compileProvider',
 	function($stateProvider, $urlRouterProvider, $authProvider, $compileProvider) {
-		$compileProvider.imgSrcSanitizationWhitelist('images/');
+		$compileProvider.imgSrcSanitizationWhitelist('/');
 
 	$stateProvider.state('home', {
 		url: "/",
