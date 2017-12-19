@@ -28,6 +28,12 @@ nav {
 	z-index: 1;
 }
 
+.heading {
+	color: #1779ba;
+	font-size: 2em;
+	font-weight: bold;
+}
+
 .pageCenter {
 	min-height: 100vh;
 }
@@ -176,13 +182,13 @@ input {
 }
 
 .home {
-	background-image: url('../images/background_home.png');
+	background-image: url('../images/setup_background.png');
 	background-position: center center;
 	background-size: cover;
 }
 
-.setup {
+/* .setup {
 	background-image: url('../images/equip_setup_background.jpg');
 	background-position: center center;
 	background-size: cover;
-}
+} */
